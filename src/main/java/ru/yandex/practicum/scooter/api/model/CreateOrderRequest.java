@@ -1,6 +1,7 @@
 package ru.yandex.practicum.scooter.api.model;
 
 import java.util.List;
+
 public class CreateOrderRequest {
     private String firstName;
     private String lastName;
@@ -11,6 +12,21 @@ public class CreateOrderRequest {
     private String deliveryDate;
     private String comment;
     private List<String> color;
+
+    public CreateOrderRequest(String firstName, String lastName, String address, int metroStation, String phone, int rentTime, String deliveryDate, String comment, List<String> color) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.address = address;
+        this.metroStation = metroStation;
+        this.phone = phone;
+        this.rentTime = rentTime;
+        this.deliveryDate = deliveryDate;
+        this.comment = comment;
+        this.color = color;
+    }
+
+    public CreateOrderRequest() {
+    }
 
     public String getFirstName() {
         return firstName;
@@ -82,20 +98,5 @@ public class CreateOrderRequest {
 
     public void setColor(List<String> color) {
         this.color = color;
-    }
-
-    public CreateOrderRequest(String firstName, String lastName, String address, int metroStation, String phone, int rentTime, String deliveryDate, String comment, List<String> color) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.address = address;
-        this.metroStation = metroStation;
-        this.phone = phone;
-        this.rentTime = rentTime;
-        this.deliveryDate = deliveryDate;
-        this.comment = comment;
-        this.color = color;
-    }
-
-    public CreateOrderRequest() {
     }
 }

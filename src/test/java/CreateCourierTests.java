@@ -14,7 +14,7 @@ import static ru.yandex.practicum.scooter.api.utils.RequestUtils.*;
 public class CreateCourierTests {
 
     CreateCourierRequest createCourier = new CreateCourierRequest(DEFAULT_COURIER_LOGIN,DEFAULT_COURIER_PASSWORD,DEFAULT_COURIER_FIRST_NAME);
-    Boolean clearCreatedCourier;
+    private Boolean clearCreatedCourier;
     @Before
     public void setUp() {
         clearCreatedCourier = true;

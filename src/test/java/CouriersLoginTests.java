@@ -15,7 +15,7 @@ import static ru.yandex.practicum.scooter.api.utils.RequestUtils.sendPostRequest
 public class CouriersLoginTests {
     CreateCourierRequest createCourier = new CreateCourierRequest(DEFAULT_COURIER_LOGIN,DEFAULT_COURIER_PASSWORD,DEFAULT_COURIER_FIRST_NAME);
     CourierLoginRequest loginCourier = new CourierLoginRequest(DEFAULT_COURIER_LOGIN, DEFAULT_COURIER_PASSWORD);
-    int createdCourierID;
+    private int createdCourierID;
     @Before
     public void setUp() {
         RestAssured.baseURI = BASE_URL;
